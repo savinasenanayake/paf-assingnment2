@@ -1,0 +1,53 @@
+package com.smartcampus.entity;
+
+import lombok.*;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.time.LocalDateTime;
+
+@Document(collection = "users")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class User {
+
+    @Id
+    private String id;
+
+    @Indexed(unique = true)
+    private String email;
+
+    // Null for Google OAuth users
+    private String password;
+
+    private String name;
+
+    private Role role;
+
+    private AuthProvider provider;
+
+    // Google's unique sub ID
+    private String providerId;
+
+    @Builder.Default
+    private boolean enabled = true;
+
+    // ✅ 2FA fields
+    private String mfaSecret;                    // TOTP secret key
+    
+    @Builder.Default
+    private boolean mfaEnabled = false;          // is 2FA fully set up?
+    
+    @Builder.Default
+    private boolean mfaRequired = false;         // does this role need 2FA?
+
+    @Builder.Default
+    private boolean firstLogin = true;           // track first-time login
+
+    @CreatedDate
+    private LocalDateTime createdAt;
+}
