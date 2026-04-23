@@ -10,7 +10,7 @@ const CSS = `
   --surface:   #ffffff;
   --border:    #e4dfd4;
   --text:      #1c1917;
-  --muted:     #78716c;
+  --muted:     #e86d15;
   --accent:    #0d7a6b;
   --accent-lt: #0d7a6b18;
   --warn:      #b45309;
