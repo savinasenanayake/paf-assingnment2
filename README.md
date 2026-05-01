@@ -1,4 +1,4 @@
-# Tikech University Incident Portal
+# Smart Campus Hub - Incident Portal
 
 A simple proof-of-concept web platform for campus incident ticket creation and tracking.
 

@@ -26,16 +26,23 @@
 
 .logo-link {
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.3));
 }
 
 .navbar-logo h2 {
   margin: 0;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 50%, #3b82f6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 800;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
